@@ -1,4 +1,3 @@
-
 name: My First GitHub Actions
 
 on: [push]
@@ -13,13 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Check runner environment
-        run: |
-          uname -a
-          which python || true
-          which python3 || true
-          python3 --version || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
